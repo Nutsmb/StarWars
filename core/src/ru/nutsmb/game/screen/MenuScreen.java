@@ -53,4 +53,11 @@ public class MenuScreen extends BaseScreen {
         super.dispose();
         img.dispose();
     }
+
+    @Override
+    public boolean touchDown(int screenX, int screenY, int pointer, int button) {
+        touch.x = screenX;
+        touch.y = Gdx.graphics.getHeight() - screenY;
+        return false;
+    }
 }
