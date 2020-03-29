@@ -9,7 +9,7 @@ import ru.nutsmb.game.math.Rect;
 public abstract class Sprite extends Rect {
 
     protected float angle;
-    protected float scale;
+    protected float scale = 1f;
     protected TextureRegion[] regions;
     protected int frame;
 
@@ -38,15 +38,15 @@ public abstract class Sprite extends Rect {
         setWidth(height * aspect);
     }
 
-    public void resize(Rect worldBounds){};
+    public void resize(Rect worldBounds){}
 
-    public void touchDown(Vector2 touch, int pointer, int button){};
+    public void touchDown(Vector2 touch, int pointer, int button){}
 
-    public void touchUp(int screenX, int screenY, int pointer, int button){};
+    public void touchUp(int screenX, int screenY, int pointer, int button){}
 
-    public void touchDragged(int screenX, int screenY, int pointer){};
+    public void touchDragged(int screenX, int screenY, int pointer){}
 
-    public void update(float delta){};
+    public void update(float delta){}
 
     public float getAngle(){        return angle; }
 
