@@ -15,7 +15,7 @@ public class Rect {
         this(from.position.x, from.position.y, from.getHalfWidth(), from.getHalfHeight());
     }
 
-    public Rect(float x, float y,  float halfWidth, float halfHeiht){
+    public Rect(float x, float y,  float halfWidth, float halfHeight){
         position.set(x,y);
         this.halfWidth = halfWidth;
         this.halfHeight = halfHeight;
