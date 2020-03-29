@@ -10,13 +10,11 @@ import ru.nutsmb.game.math.Rect;
 public class Hero extends Sprite {
 
     private Vector2 speed;
-    private Vector2 position;
     private Vector2 buf;
     private float SPEED_LEN;
 
     public Hero(Texture region, float velocity) {
         super(new TextureRegion(region));
-        position = new Vector2();
         speed = new Vector2();
         buf = new Vector2();
         SPEED_LEN = velocity;
@@ -33,7 +31,6 @@ public class Hero extends Sprite {
         buf.set(touch);
         if(buf.sub(position).len() > SPEED_LEN) {
             position.add(speed);
-            System.out.println(position);
         }
         else {
             position.set(touch);
